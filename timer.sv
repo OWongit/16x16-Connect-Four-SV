@@ -1,9 +1,9 @@
 module timer(clk, value, out, RST);
-	input logic 			clk, RST;
-	input logic [31:0] 	value;
-	output logic 			out; //true if count == value
-	logic [31:0] 			count;
-	logic 					on = 0;
+	input logic 	   clk, RST;
+	input logic [31:0] value;
+	output logic 	   out; //true if count == value
+	logic [31:0] 	   count;
+	logic 		   on = 0;
 	
 	always_ff @(posedge clk) begin
 		if(RST) begin

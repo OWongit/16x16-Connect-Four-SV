@@ -1,6 +1,6 @@
 module counter(clk, value, out, RST);
 	input logic 			clk, RST;
-	input logic [31:0] 	value;
+	input logic [31:0] 	        value;
 	output logic 			out; //true if count == value
 	logic [31:0] 			count = 0;
 	

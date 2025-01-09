@@ -1,5 +1,5 @@
 module column(clk, RST, player, RedPixels, GrnPixels, placement, dropping);
-    input logic               clk, RST, player, placement, dropping;
+    input logic         clk, RST, player, placement, dropping;
     output logic [15:0] RedPixels; // 16 array of red LEDs
     output logic [15:0] GrnPixels; // 16 array of green LEDs
 	 

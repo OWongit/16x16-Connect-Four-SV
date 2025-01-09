@@ -1,5 +1,5 @@
 module row(clk, RST, player, RedPixels, GrnPixels, aboveG, belowG, aboveR, belowR);
-		input logic               clk, player, RST, aboveG, aboveR, belowG, belowR;
+		input logic  clk, player, RST, aboveG, aboveR, belowG, belowR;
 		output logic RedPixels; 
 		output logic GrnPixels; 
 	 

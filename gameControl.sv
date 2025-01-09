@@ -1,8 +1,8 @@
 module gameControl(clk, RST, player, RedPixels, GrnPixels, turn, scoreG, scoreR, nextRound);
-	input logic 					clk, RST, turn;
+	input logic 			clk, RST, turn;
 	input logic [15:0][15:0] 	RedPixels, GrnPixels;
-	output logic 					player, nextRound;
-	output logic [2:0] 			scoreG, scoreR;
+	output logic 			player, nextRound;
+	output logic [2:0] 		scoreG, scoreR;
 
 	//create delay for scanning
 	timer TIMER (.clk(clk), .value(5'b11111), .out(SLOWERtimer), .RST(turn));
@@ -14,11 +14,11 @@ module gameControl(clk, RST, player, RedPixels, GrnPixels, turn, scoreG, scoreR,
 	
 	
     always_comb begin
-		ns = none; //prevent latches  
-		case(ps)
+	ns = none; //prevent latches  
+	case(ps)
 		
-		none: begin
-		  // check Green
+	none: begin
+	// check Green
         // Horizontal check
         for (int i = 0; i < 16; i++) begin
             for (int j = 1; j <= 12; j++) begin
@@ -59,7 +59,7 @@ module gameControl(clk, RST, player, RedPixels, GrnPixels, turn, scoreG, scoreR,
             end
         end
 		  
-		  // check Red
+	// check Red
         // Horizontal check
         for (int i = 0; i < 16; i++) begin
             for (int j = 1; j <= 12; j++) begin
@@ -99,15 +99,15 @@ module gameControl(clk, RST, player, RedPixels, GrnPixels, turn, scoreG, scoreR,
                 end
             end
         end
-		 end
+	end
 		  PR: ns = PR;
 		  
 		  PG: ns = PG;
 		  
 		  default: ns = none;
 		 
-		endcase
-	end
+	endcase
+    end
 	
 	
 	

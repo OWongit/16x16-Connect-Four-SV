@@ -4,7 +4,7 @@ module hexFlash(clk, trigger, HEXin, HEXout);
     input  logic [6:0]  HEXin;   
     output logic [6:0]  HEXout;
 
-	 logic [31:0] countRATE = 0;
+    logic [31:0] countRATE = 0;
     logic [3:0]  countFLASH = 0;
     logic        active = 0;
     logic        displayON = 0;

@@ -12,7 +12,7 @@ module displays(clk, RST, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, scoreG, scoreR);
 
 	always_comb begin
 	
-		if(scoreG == 3'b001)				//1
+		if(scoreG == 3'b001)			//1
 				HEX3 = 7'b1111001;
 		else if(scoreG == 3'b010)		//2
 				HEX3 = 7'b0100100;
@@ -20,10 +20,10 @@ module displays(clk, RST, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, scoreG, scoreR);
 				HEX3 = 7'b0110000;
 		else if(scoreG == 3'b100)		//4
 				HEX3 = 7'b0011001;
-		else									//0 
+		else					//0 
 				HEX3 = 7'b1000000;		
 				
-		if(scoreR == 3'b001)				//1
+		if(scoreR == 3'b001)			//1
 				HEX2 = 7'b1111001;
 		else if(scoreR == 3'b010)		//2
 				HEX2 = 7'b0100100;
@@ -31,7 +31,7 @@ module displays(clk, RST, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, scoreG, scoreR);
 				HEX2 = 7'b0110000;
 		else if(scoreR == 3'b100)		//4
 				HEX2 = 7'b0011001;
-		else									//0
+		else					//0
 				HEX2 = 7'b1000000;		
 	end
 endmodule
