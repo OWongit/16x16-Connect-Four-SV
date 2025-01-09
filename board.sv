@@ -1,6 +1,6 @@
 module board(clk, RST, player, RedPixels, GrnPixels, placement, left, right);
     input logic               clk, RST, player, left, right;
-    input logic  [7:0]       placement; // column of placement
+    input logic  [7:0]        placement; // column of placement
     output logic [15:0][15:0] RedPixels; // 16x16 array of red LEDs
     output logic [15:0][15:0] GrnPixels; // 16x16 array of green LEDs
 
